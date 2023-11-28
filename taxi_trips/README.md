@@ -11,7 +11,7 @@
 - стоимости поездки.
 
 ## Использованные библиотеки
-pandas, sklearn, lightgbm, matplotlib
+PySpark, pyspark.ml, pandas, numpy, matplotlib, Docker
 
 ## Статус проекта
 В работе
