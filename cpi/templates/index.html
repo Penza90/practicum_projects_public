@@ -1,0 +1,17 @@
+<form action="{{ url_for('predict')}}" method="post">
+  <p>Укажите полугодие, за которое осуществляется прогноз</p>
+    <label><input type="radio" name="Period" value="1" required="required" 		/>Первое полугодие</label>
+      <label><input type="radio" name="Period" value="2" required="required" 		/>Второе полугодие</label><br>  
+  <p>Введите значение предыдущего ИПЦ</p>
+    <input type="number" name="CPI_lag1" step=0.000001 placeholder="Введите значение ИПЦ" 			  		required="required" /> Step 0.000001<br> 
+  <p>Введите значение ИПЦ год назад</p>
+    <input type="number" name="CPI_lag2" step=0.000001 placeholder="Введите значение ИПЦ" 			  		required="required" /> Step 0.000001<br> 
+  <p>Введите значение ИПЦ 2 года назад</p>
+    <input type="number" name="CPI_lag4" step=0.000001 placeholder="Введите значение ИПЦ" 			  		required="required" /> Step 0.000001<br> 
+  <p>Введите скользящее среднее значение ИПЦ за год</p>
+    <input type="number" name="Rolling_mean2" step=0.000001 placeholder="Введите значение скользящего среднего" 			  		required="required" /> Step 0.000001<br>
+  <p>Введите скользящее среднее значение ИПЦ за два года</p>
+    <input type="number" name="Rolling_mean4" step=0.000001 placeholder="Введите значение скользящего среднего" 			  		required="required" /> Step 0.000001<br>   
+    <button type="submit">Predict</button>
+</form>
+<p> {{ prediction }} </p>
